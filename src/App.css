@@ -105,7 +105,6 @@ li a:visited {
 
 .projects a img:hover {
   transform: scale(1.1);
-  opacity: 70%;
 }
 
 h4 {
