@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/about/static/css/main.068e7c67.chunk.css",
+    "main.js": "/about/static/js/main.19aa8aeb.chunk.js",
+    "main.js.map": "/about/static/js/main.19aa8aeb.chunk.js.map",
+    "runtime-main.js": "/about/static/js/runtime-main.0cbfb7d7.js",
+    "runtime-main.js.map": "/about/static/js/runtime-main.0cbfb7d7.js.map",
+    "static/js/2.0c3660b2.chunk.js": "/about/static/js/2.0c3660b2.chunk.js",
+    "static/js/2.0c3660b2.chunk.js.map": "/about/static/js/2.0c3660b2.chunk.js.map",
+    "index.html": "/about/index.html",
+    "static/css/main.068e7c67.chunk.css.map": "/about/static/css/main.068e7c67.chunk.css.map",
+    "static/js/2.0c3660b2.chunk.js.LICENSE.txt": "/about/static/js/2.0c3660b2.chunk.js.LICENSE.txt",
+    "static/media/headshot.8a481022.png": "/about/static/media/headshot.8a481022.png",
+    "static/media/lofi-rider-icon.d6e6160f.png": "/about/static/media/lofi-rider-icon.d6e6160f.png",
+    "static/media/tec-icon.4b154ec6.png": "/about/static/media/tec-icon.4b154ec6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cbfb7d7.js",
+    "static/js/2.0c3660b2.chunk.js",
+    "static/css/main.068e7c67.chunk.css",
+    "static/js/main.19aa8aeb.chunk.js"
+  ]
+}
