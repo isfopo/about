@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { SectionType } from "../../consts";
+import { SectionType } from "consts";
 
 export interface SectionProps extends PropsWithChildren {
   subject: SectionType;

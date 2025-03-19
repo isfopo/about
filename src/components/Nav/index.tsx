@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { SectionLabels, SectionType } from "../../consts";
+import { SectionLabels, SectionType } from "consts";
 import styles from "./index.module.css";
 
 export interface NavProps {
