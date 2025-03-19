@@ -8,15 +8,11 @@ export const Nav = ({ subjects }: NavProps) => {
   return (
     <header>
       <nav>
-        <ul>
-          <li>
-            {subjects.map((subject) => (
-              <Link activeClass="active" smooth spy to={subject}>
-                {subject}
-              </Link>
-            ))}
-          </li>
-        </ul>
+        {subjects.map((subject) => (
+          <Link activeClass="active" smooth spy to={subject}>
+            {subject}
+          </Link>
+        ))}
       </nav>
     </header>
   );
