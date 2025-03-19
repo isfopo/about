@@ -1,8 +1,8 @@
 import { Link } from "react-scroll";
-import { SECTIONS } from "../../App";
+import { SectionLabels, SectionType } from "../../consts";
 
 export interface NavProps {
-  sections: readonly (typeof SECTIONS)[number][];
+  sections: readonly SectionType[];
 }
 
 export const Nav = ({ sections }: NavProps) => {
@@ -11,7 +11,7 @@ export const Nav = ({ sections }: NavProps) => {
       <nav>
         {sections.map((section) => (
           <Link activeClass="active" smooth spy to={section}>
-            {section}
+            {SectionLabels[section]}
           </Link>
         ))}
       </nav>

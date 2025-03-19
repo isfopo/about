@@ -39,7 +39,7 @@ body {
 section {
   display: grid;
   place-items: center;
-  height: 50vh;
+  height: 100vh;
   font-size: 32px;
   font-weight: bold;
 }
