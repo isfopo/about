@@ -35,6 +35,29 @@ body {
   color: var(--md-sys-color-on-background);
 }
 
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 2;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% - 1.5rem);
+  background-color: var(--md-sys-color-background);
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
