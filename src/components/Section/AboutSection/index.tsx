@@ -4,6 +4,8 @@ import styles from "./index.module.css";
 
 const name = "Isaac Poole";
 
+const tag = "Full-Stack Software Developer";
+
 const aboutMe = `Single-origin coffee bodega boys put a bird on it, edison bulb vice
           man braid ethical grailed shaman tumeric retro af vaporware. Pour-over
           subway tile neutral milk hotel, dreamcatcher mukbang sartorial
@@ -18,6 +20,7 @@ export const AboutSection = () => {
       <Frame src={"public/photos/mountain_portrait.jpg"} />
       <span>
         <h2>{name}</h2>
+        <h3>{tag}</h3>
         <p>{aboutMe}</p>
       </span>
     </Section>
