@@ -19,7 +19,7 @@ const about = `Single-origin coffee bodega boys put a bird on it, edison bulb vi
           selvage pitchfork mumblecore. Helvetica locavore sus franzen shabby
           chic big mood.`;
 
-const skills: SkillProps[] = [{ name: "Typescript", level: 90 }];
+const skills: SkillProps[] = [{ name: "Typescript", level: 10 }];
 
 function App() {
   return (

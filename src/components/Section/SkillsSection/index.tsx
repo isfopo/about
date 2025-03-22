@@ -12,7 +12,7 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
       <h2>Skills</h2>
       <span>
         {skills.map((skill) => (
-          <Skill {...skill} />
+          <Skill {...skill} key={skill.name} />
         ))}
       </span>
     </Section>

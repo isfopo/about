@@ -11,7 +11,7 @@ export const Nav = ({ sections }: NavProps) => {
     <header className={styles["header"]}>
       <nav className={styles["nav"]}>
         {sections.map((section) => (
-          <Link activeClass="active" smooth spy to={section}>
+          <Link key={section} activeClass="active" smooth spy to={section}>
             {SectionLabels[section]}
           </Link>
         ))}
