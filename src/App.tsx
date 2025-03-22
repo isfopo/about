@@ -1,5 +1,6 @@
 import "./App.css";
-import { Nav } from "components/Nav";
+import { Header } from "components/Header";
+import { SocialPlatformLink } from "components/Header/Socials";
 import { AboutSection } from "components/Section/AboutSection";
 import { ContactSection } from "components/Section/ContactSection";
 import { ProjectsSection } from "components/Section/ProjectsSection";
@@ -19,12 +20,22 @@ const about = `Single-origin coffee bodega boys put a bird on it, edison bulb vi
           selvage pitchfork mumblecore. Helvetica locavore sus franzen shabby
           chic big mood.`;
 
-const skills: SkillProps[] = [{ name: "Typescript", level: 10 }];
+const skills: SkillProps[] = [
+  { name: "Typescript", level: 10 },
+  { name: "React", level: 10 },
+];
+
+const socials: SocialPlatformLink[] = [
+  {
+    label: "github",
+    href: "https://www.github.com/isfopo",
+  },
+];
 
 function App() {
   return (
     <>
-      <Nav sections={SECTIONS} />
+      <Header sections={SECTIONS} socials={socials} />
       <AboutSection name={name} tag={tag} about={about} />
       <SkillsSection skills={skills} />
       <ProjectsSection />

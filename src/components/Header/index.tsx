@@ -1,12 +1,14 @@
 import { Link } from "react-scroll";
 import { SectionLabels, SectionType } from "consts";
 import styles from "./index.module.css";
+import { SocialPlatformLink, Socials } from "./Socials";
 
-export interface NavProps {
+export interface HeaderProps {
   sections: readonly SectionType[];
+  socials: SocialPlatformLink[];
 }
 
-export const Nav = ({ sections }: NavProps) => {
+export const Header = ({ sections, socials }: HeaderProps) => {
   return (
     <header className={styles["header"]}>
       <nav className={styles["nav"]}>
@@ -16,6 +18,7 @@ export const Nav = ({ sections }: NavProps) => {
           </Link>
         ))}
       </nav>
+      <Socials platforms={socials} />
     </header>
   );
 };
