@@ -1,4 +1,3 @@
-import { CircularProgress, LinearProgress } from "@mui/material";
 import { Sparkles } from "lucide-react";
 import styles from "./index.module.css";
 
