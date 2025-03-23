@@ -1,6 +1,7 @@
 import { Section } from "components/Section";
 import { Contact } from "lucide-react";
 import { ContactIcons } from "./ContactIcons";
+import styles from "./index.module.css";
 
 export interface Contact {
   phone: `(${string}) ${string}-${string}`;
@@ -9,14 +10,16 @@ export interface Contact {
 
 export const ContactSection = (contact: Contact) => {
   return (
-    <Section subject="contact">
+    <Section subject="contact" className={styles["contact"]}>
       <h1>Contact</h1>
-      {Object.keys(contact).map((key) => (
-        <div key={key}>
-          {ContactIcons[key as keyof Contact]}{" "}
-          <span>{contact[key as keyof Contact]}</span>
-        </div>
-      ))}
+      <div className={styles["container"]}>
+        {Object.keys(contact).map((key) => (
+          <div key={key}>
+            {ContactIcons[key as keyof Contact]}{" "}
+            <span>{contact[key as keyof Contact]}</span>
+          </div>
+        ))}
+      </div>
     </Section>
   );
 };
