@@ -30,6 +30,10 @@ const socials: SocialPlatformLink[] = [
     label: "github",
     href: "https://www.github.com/isfopo",
   },
+  {
+    label: "linkedin",
+    href: "https://www.linkedin.com/in/isaacpoole/",
+  },
 ];
 
 function App() {

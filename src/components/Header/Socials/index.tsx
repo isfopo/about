@@ -1,7 +1,11 @@
-import { Github, Link } from "lucide-react";
+import { Link } from "lucide-react";
+import Github from "assets/icons/github.svg?react";
+import LinkedIn from "assets/icons/linkedin.svg?react";
+import styles from "./index.module.css";
 
 export const SocialIcons: Record<string, React.ReactElement> = {
   github: <Github />,
+  linkedin: <LinkedIn />,
 };
 
 export interface SocialPlatformLink {
@@ -14,9 +18,9 @@ export interface SocialsProps {
 }
 
 export const Socials = ({ platforms }: SocialsProps) => (
-  <span>
+  <span className={styles["socials"]}>
     {platforms.map(({ label, href }) => (
-      <a href={href} aria-label={label} target="_blank">
+      <a href={href} aria-label={label} target="_blank" key={label}>
         {SocialIcons[label] ?? <Link />}
       </a>
     ))}

@@ -1,0 +1,10 @@
+.socials {
+  position: absolute;
+  to: 0;
+  right: 0;
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -1,4 +1,5 @@
 .header {
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
   top: -5px;
@@ -18,14 +19,14 @@
   gap: 1rem;
   padding: 0 1rem;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
-}
 
-.nav a {
-  font-size: 16px;
-  line-height: 1.1;
-  cursor: pointer;
-}
+  a {
+    font-size: 16px;
+    line-height: 1.1;
+    cursor: pointer;
 
-.nav a:hover {
-  line-height: 1.1;
+    &:hover {
+      line-height: 1.1;
+    }
+  }
 }
