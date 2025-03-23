@@ -2,7 +2,7 @@ import "./App.css";
 import { Header } from "components/Header";
 import { SocialPlatformLink } from "components/Header/Socials";
 import { AboutSection } from "components/Section/AboutSection";
-import { ContactSection } from "components/Section/ContactSection";
+import { Contact, ContactSection } from "components/Section/ContactSection";
 import { Project, ProjectsSection } from "components/Section/ProjectsSection";
 import { SkillsSection } from "components/Section/SkillsSection";
 import { SkillProps } from "components/Section/SkillsSection/Skill";
@@ -83,6 +83,11 @@ const projects: Project[] = [
   },
 ];
 
+const contact: Contact = {
+  phone: "(502) 220-8265",
+  email: "isaacpoolemusic@gmail.com",
+};
+
 function App() {
   return (
     <>
@@ -90,7 +95,7 @@ function App() {
       <AboutSection name={name} tag={tag} about={about} />
       <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} />
-      <ContactSection />
+      <ContactSection {...contact} />
     </>
   );
 }
