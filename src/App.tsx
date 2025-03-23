@@ -3,7 +3,7 @@ import { Header } from "components/Header";
 import { SocialPlatformLink } from "components/Header/Socials";
 import { AboutSection } from "components/Section/AboutSection";
 import { ContactSection } from "components/Section/ContactSection";
-import { ProjectsSection } from "components/Section/ProjectsSection";
+import { Project, ProjectsSection } from "components/Section/ProjectsSection";
 import { SkillsSection } from "components/Section/SkillsSection";
 import { SkillProps } from "components/Section/SkillsSection/Skill";
 import { SECTIONS } from "consts";
@@ -36,13 +36,43 @@ const socials: SocialPlatformLink[] = [
   },
 ];
 
+const projects: Project[] = [
+  {
+    title: "Grind",
+    category: "programming",
+    description: "A VS Code extension to keep track of tasks for the day.",
+    image: {
+      label: "Grind VS Code extension",
+      src: "public/photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "github",
+      href: "https://www.github.com/isfopo/grind",
+    },
+  },
+  {
+    title: "genra // non // genra",
+    category: "music",
+    description:
+      "An experimental, electronic, improvisatory guitar and drum duo.",
+    image: {
+      label: "genra // non // genra",
+      src: "public/photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "bandcamp",
+      href: "https://genranongenra.bandcamp.com/album/18628",
+    },
+  },
+];
+
 function App() {
   return (
     <>
       <Header sections={SECTIONS} socials={socials} />
       <AboutSection name={name} tag={tag} about={about} />
       <SkillsSection skills={skills} />
-      <ProjectsSection />
+      <ProjectsSection projects={projects} />
       <ContactSection />
     </>
   );
