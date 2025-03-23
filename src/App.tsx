@@ -64,6 +64,19 @@ const projects: Project[] = [
       href: "https://genranongenra.bandcamp.com/album/18628",
     },
   },
+  {
+    title: "These Elements Combined",
+    category: "music",
+    description: "sound \\ shape \\ place \\ memory",
+    image: {
+      label: "These Elements Combined",
+      src: "public/photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "bandcamp",
+      href: "https://these-elements-combined.bandcamp.com/album/we-were-looking-for-transendence-in-the-eyes-of-our-lovers",
+    },
+  },
 ];
 
 function App() {
