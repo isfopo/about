@@ -34,6 +34,10 @@ const socials: SocialPlatformLink[] = [
     label: "linkedin",
     href: "https://www.linkedin.com/in/isaacpoole/",
   },
+  {
+    label: "bandcamp",
+    href: "https://these-elements-combined.bandcamp.com/album/we-were-looking-for-transendence-in-the-eyes-of-our-lovers/",
+  },
 ];
 
 const projects: Project[] = [

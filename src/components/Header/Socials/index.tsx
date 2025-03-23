@@ -1,11 +1,13 @@
 import { Link } from "lucide-react";
 import Github from "assets/icons/github.svg?react";
 import LinkedIn from "assets/icons/linkedin.svg?react";
+import Bandcamp from "assets/icons/bandcamp.svg?react";
 import styles from "./index.module.css";
 
 export const SocialIcons: Record<string, React.ReactElement> = {
   github: <Github />,
   linkedin: <LinkedIn />,
+  bandcamp: <Bandcamp />,
 };
 
 export interface SocialPlatformLink {

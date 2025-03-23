@@ -1,6 +1,8 @@
 import { Section } from "components/Section";
-import Github from "assets/icons/github.svg?react";
-import Bandcamp from "assets/icons/bandcamp.svg?react";
+
+import styles from "./index.module.css";
+import { PlatformIcons } from "./PlatformIcons";
+import useEmblaCarousel from "embla-carousel-react";
 
 export type ProjectCategory = "programming" | "music";
 
@@ -24,26 +26,28 @@ export interface ProjectsSectionProps {
   projects: Project[];
 }
 
-export const PlatformIcons: Record<ProjectLinkPlatform, React.ReactElement> = {
-  github: <Github />,
-  bandcamp: <Bandcamp />,
-};
-
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
+  const [emblaRef] = useEmblaCarousel();
+
   return (
-    <Section subject="projects">
+    <Section subject="projects" className={styles["projects"]}>
       <h1>Projects</h1>
-      {projects.map(({ title, category, description, image, link }) => (
-        <div key={title}>
-          <img src={image.src} aria-label={image.label} />
-          <h3>{title}</h3>
-          <h4>{category}</h4>
-          <p>{description}</p>
-          <a href={link.href} target="_blank">
-            {PlatformIcons[link.platform]}
-          </a>
+      <div ref={emblaRef}>
+        <div className={styles["container"]}>
+          {projects.map(({ title, category, description, image, link }) => (
+            <div key={title} className={styles["slide"]}>
+              <div className={styles["snapper"]}></div>
+              <img src={image.src} aria-label={image.label} />
+              <h3>{title}</h3>
+              <h4>{category}</h4>
+              <p>{description}</p>
+              <a href={link.href} target="_blank">
+                {PlatformIcons[link.platform]}
+              </a>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </Section>
   );
 };
