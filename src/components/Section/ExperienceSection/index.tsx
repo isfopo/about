@@ -115,6 +115,16 @@ export const ExperienceSection = ({
             )
           )}
         </div>
+        <div className={styles["certifications"]}>
+          {certifications.map(({ title, issuer, dateIssued, description }) => (
+            <div>
+              <h3>{title}</h3>
+              <h4>{issuer}</h4>
+              <p>{dateIssued}</p>
+              <p>{description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );
