@@ -1,4 +1,29 @@
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 100%;
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: start;
+    margin: 1rem;
+
+    p {
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: min(50%, 46rem) 1fr;
+
+    .container {
+      margin: 0;
+      margin-right: 5rem;
+    }
+  }
 }
