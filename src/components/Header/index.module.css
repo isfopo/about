@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   position: -webkit-sticky;
   position: sticky;
   top: -5px;
@@ -9,6 +9,10 @@
   min-height: 70px;
   width: 100%;
   background-color: var(--md-sys-color-surface);
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .nav {
