@@ -51,9 +51,9 @@ export const ExperienceSection = ({
 }: ExperienceSectionProps) => {
   return (
     <Section subject="experience" className={styles["experience"]}>
-      <h1>Experience</h1>
       <div className={styles["container"]}>
         <div className={styles["career"]}>
+          <h2>Experience</h2>
           {career.map(
             ({ title, company, location, startDate, endDate, description }) => (
               <div>
