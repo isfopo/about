@@ -16,13 +16,9 @@ const name = "Isaac Poole";
 
 const tag = "Full-Stack Software Developer";
 
-const about = `Single-origin coffee bodega boys put a bird on it, edison bulb vice
-          man braid ethical grailed shaman tumeric retro af vaporware. Pour-over
-          subway tile neutral milk hotel, dreamcatcher mukbang sartorial
-          drinking vinegar. Stumptown man bun hammock everyday carry twee
-          selvage gochujang 8-bit tilde craft beer. Poke gatekeep tumeric
-          selvage pitchfork mumblecore. Helvetica locavore sus franzen shabby
-          chic big mood.`;
+const about = `A motivated individual with a strong passion for continuous learning and innovation.
+Possessing a background in software engineering and music, I am driven by creativity and
+dedicated to achieving excellence in my work and the technology I create.`;
 
 const skills: SkillProps[] = [
   { name: "Typescript", level: 10 },
