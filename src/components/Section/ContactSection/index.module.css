@@ -27,5 +27,18 @@
         color: var(--md-sys-color-on-surface);
       }
     }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      width: 80vw;
+      gap: 4rem;
+
+      > div {
+        width: 60vw;
+        height: 8rem;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+    }
   }
 }
