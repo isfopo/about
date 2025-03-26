@@ -45,7 +45,7 @@ const experience: ExperienceSectionProps = {
     {
       title: "Full-Stack Software Engineer",
       company: "Switcher Studio",
-      location: "Louisville, KY",
+      location: "Remote",
       startDate: "May 2021",
       endDate: "Present",
       description: "Developing web applications for various clients.",

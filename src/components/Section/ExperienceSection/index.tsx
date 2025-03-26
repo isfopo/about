@@ -57,19 +57,22 @@ export const ExperienceSection = ({
           {career.map(
             ({ title, company, location, startDate, endDate, description }) => (
               <div>
-                <h3>{title}</h3>
+                <div className={styles["header"]}>
+                  <h3>{company}</h3>
+                  <p>
+                    {startDate} - {endDate ? endDate : "Present"}
+                  </p>
+                </div>
                 <h4>
-                  {company} - {location}
+                  {title} - {location}
                 </h4>
-                <p>
-                  {startDate} - {endDate ? endDate : "Present"}
-                </p>
                 <p>{description}</p>
               </div>
             )
           )}
         </div>
         <div className={styles["education"]}>
+          <h2>Education</h2>
           {education.map(
             ({
               degree,
@@ -80,13 +83,15 @@ export const ExperienceSection = ({
               description,
             }) => (
               <div>
-                <h3>{degree}</h3>
+                <div className={styles["header"]}>
+                  <h3>{institution}</h3>
+                  <p>
+                    {startDate} - {endDate ? endDate : "Present"}
+                  </p>
+                </div>
                 <h4>
-                  {institution} - {location}
+                  {degree} - {location}
                 </h4>
-                <p>
-                  {startDate} - {endDate ? endDate : "Present"}
-                </p>
                 <p>{description}</p>
               </div>
             )
