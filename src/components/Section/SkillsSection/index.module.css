@@ -23,8 +23,8 @@
     }
 
     progress[value] {
-      --color: var(--md-sys-color-tertiary); /* the progress color */
-      --background: var(--md-sys-color-on-tertiary); /* the background color */
+      --color: var(--md-sys-color-secondary); /* the progress color */
+      --background: var(--md-sys-color-on-secondary); /* the background color */
       --border-radius: 10em;
 
       -webkit-appearance: none;
