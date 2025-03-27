@@ -21,7 +21,8 @@ dedicated to achieving excellence in my work and the technology I create.`;
 
 const skills: Skill[] = [
   { name: "Typescript", level: 10 },
-  { name: "React", level: 10 },
+  { name: "React Frontend", level: 10 },
+  { name: "C# / .NET Application Development", level: 8 },
   { name: "Python", level: 7 },
 ];
 
