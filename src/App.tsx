@@ -115,8 +115,8 @@ const projects: Project[] = [
 ];
 
 const contact: Contact = {
-  phone: "(502) 220-8265",
-  email: "isaacpoolemusic@gmail.com",
+  tel: "(502) 220-8265",
+  mailto: "isaacpoolemusic@gmail.com",
 };
 
 function App() {
