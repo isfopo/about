@@ -33,7 +33,7 @@ section {
   place-items: center;
 
   @media (min-width: 768px) {
-    height: 64rem;
+    min-height: 48rem;
   }
 }
 
