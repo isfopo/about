@@ -1,4 +1,57 @@
-.section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.skills {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-gap: 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+  }
+
+  .skill {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    justify-items: start;
+
+    @media (min-width: 768px) {
+      width: 40rem;
+    }
+
+    progress[value] {
+      --color: var(--md-sys-color-tertiary); /* the progress color */
+      --background: var(--md-sys-color-on-tertiary); /* the background color */
+      --border-radius: 10em;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      width: 100%;
+      border-radius: var(--border-radius);
+      background: var(--background);
+    }
+    progress[value]::-webkit-progress-bar {
+      border-radius: var(--border-radius);
+      background: var(--background);
+    }
+    progress[value]::-webkit-progress-value {
+      border-radius: var(--border-radius);
+      background: var(--color);
+    }
+    progress[value]::-moz-progress-bar {
+      border-radius: var(--border-radius);
+      background: var(--color);
+    }
+
+    label {
+      font-size: 20px;
+      display: block;
+      margin: 20px 0;
+    }
+  }
 }

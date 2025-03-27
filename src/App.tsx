@@ -8,8 +8,7 @@ import {
   ExperienceSectionProps,
 } from "components/Section/ExperienceSection";
 import { Project, ProjectsSection } from "components/Section/ProjectsSection";
-import { SkillsSection } from "components/Section/SkillsSection";
-import { SkillProps } from "components/Section/SkillsSection/Skill";
+import { Skill, SkillsSection } from "components/Section/SkillsSection";
 import { SECTIONS } from "consts";
 
 const name = "Isaac Poole";
@@ -20,9 +19,10 @@ const about = `A motivated individual with a strong passion for continuous learn
 Possessing a background in software engineering and music, I am driven by creativity and
 dedicated to achieving excellence in my work and the technology I create.`;
 
-const skills: SkillProps[] = [
+const skills: Skill[] = [
   { name: "Typescript", level: 10 },
   { name: "React", level: 10 },
+  { name: "Python", level: 7 },
 ];
 
 const socials: SocialPlatformLink[] = [

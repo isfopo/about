@@ -1,6 +1,0 @@
-.skill {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
-  justify-items: start;
-}
