@@ -31,7 +31,9 @@ body {
 section {
   display: grid;
   place-items: center;
-  margin: 1rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
 
   @media (min-width: 768px) {
     min-height: 48rem;
