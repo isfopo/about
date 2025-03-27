@@ -17,6 +17,7 @@
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
     justify-items: start;
+    height: 4rem;
 
     @media (min-width: 768px) {
       width: 40rem;
@@ -49,9 +50,9 @@
     }
 
     label {
-      font-size: 20px;
+      font-size: 16px;
       display: block;
-      margin: 20px 0;
+      margin: 0.8rem 0;
     }
   }
 }
