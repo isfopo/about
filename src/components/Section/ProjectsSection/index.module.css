@@ -8,18 +8,19 @@
     .slide {
       width: 100vw;
       flex: 0 0 100%;
-      min-width: 0;
       user-select: none;
+      background: var(--md-sys-color-secondary);
+      margin: 1rem;
 
       @media (min-width: 768px) {
         flex: 0 0 40%;
-        min-width: 0;
+        gap: 1rem;
       }
 
       h3,
       h4,
       p {
-        color: var(--md-sys-color-on-surface);
+        color: var(--md-sys-color-on-secondary);
       }
 
       h3 {
@@ -39,6 +40,7 @@
       svg {
         height: 4rem;
         width: 4rem;
+        color: var(--md-sys-color-on-secondary);
       }
     }
   }

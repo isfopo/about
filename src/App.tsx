@@ -76,9 +76,24 @@ const experience: ExperienceSectionProps = {
 
 const projects: Project[] = [
   {
+    title: "Live Remote",
+    category: "programming",
+    description: "Control Ableton Live from any device on a local network.",
+    technologies: ["Python", "WebSockets", "Ableton Live API", "Svelte"],
+    image: {
+      label: "Live Remote Project",
+      src: "/photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "github",
+      href: "https://www.github.com/isfopo/live-remote",
+    },
+  },
+  {
     title: "Grind",
     category: "programming",
     description: "A VS Code extension to keep track of tasks for the day.",
+    technologies: ["TypeScript", "VS Code Extension API"],
     image: {
       label: "Grind VS Code extension",
       src: "public/photos/mountain_portrait.jpg",
