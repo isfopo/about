@@ -64,6 +64,8 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                 <img src={image.src} aria-label={image.label} />
               </div>
 
+              <p className={styles["description"]}>{description}</p>
+
               {technologies && technologies.length > 0 && (
                 <p>
                   <strong>Technologies:</strong>
@@ -71,8 +73,6 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                   {technologies.join(", ")}
                 </p>
               )}
-
-              <p className={styles["description"]}>{description}</p>
 
               <a href={link.href} target="_blank">
                 {PlatformIcons[link.platform]}
