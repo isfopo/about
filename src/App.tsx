@@ -51,7 +51,7 @@ const experience: ExperienceSectionProps = {
       endDate: "Present",
       description: [
         "Engineered a scalable cloud service with Cloudflare Workers, facilitating precise user event tracking for advanced analytics insights.",
-        "Mastered and championed engineering group's best practices and coding standards in JavaScript and React.",
+        "Mastered and championed engineering group's best practices and coding standards in TypeScript and React.",
         "Enhanced app on-boarding via React/Stripe experience, resulting in an increase in conversion rates.",
       ],
     },
