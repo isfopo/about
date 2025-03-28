@@ -77,6 +77,7 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
               <a
                 href={link.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 title={`View ${title} on ${link.platform}`}
               >
                 {PlatformIcons[link.platform]}
