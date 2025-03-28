@@ -7,11 +7,16 @@
     display: flex;
 
     .slide {
-      width: 100vw;
-      flex: 0 0 100%;
+      width: 90%;
+      flex: 0 0 90%;
       user-select: none;
       background: var(--md-sys-color-secondary);
-      padding: 2rem 1rem;
+      padding: 1rem;
+      border-radius: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
 
       @media (min-width: 768px) {
         gap: 1rem;
@@ -27,13 +32,7 @@
 
       h3 {
         font-size: 24px;
-        margin-top: 0;
-      }
-
-      p {
-        font-size: 16px;
-        margin: 2rem 0;
-        text-align: left;
+        margin: 0;
       }
 
       .image-container {
@@ -46,13 +45,25 @@
         }
       }
 
+      p {
+        font-size: 16px;
+        margin: 0;
+        text-align: left;
+      }
+
+      .description {
+        flex-grow: 1;
+      }
+
       a {
-        position: ;
-        bottom: 1rem;
+        width: 4rem;
+        height: 4rem;
+        align-self: flex-end;
+        justify-self: end;
 
         svg {
-          height: 4rem;
-          width: 4rem;
+          width: 100%;
+          height: auto;
           color: var(--md-sys-color-on-secondary);
         }
       }

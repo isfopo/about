@@ -58,7 +58,6 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
         <div className={styles["container"]}>
           {projects.map(({ title, technologies, description, image, link }) => (
             <div key={title} className={styles["slide"]}>
-              <div className={styles["snapper"]}></div>
               <h3>{title}</h3>
 
               <div className={styles["image-container"]}>
@@ -67,11 +66,13 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 
               {technologies && technologies.length > 0 && (
                 <p>
-                  <strong>Technologies:</strong> {technologies.join(", ")}
+                  <strong>Technologies:</strong>
+                  <br />
+                  {technologies.join(", ")}
                 </p>
               )}
 
-              <p>{description}</p>
+              <p className={styles["description"]}>{description}</p>
 
               <a href={link.href} target="_blank">
                 {PlatformIcons[link.platform]}
