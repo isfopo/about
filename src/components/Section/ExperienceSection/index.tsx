@@ -46,93 +46,95 @@ export const ExperienceSection = ({
 }: ExperienceSectionProps) => {
   return (
     <Section subject="experience" className={styles["experience"]}>
-      <div className={styles["container"]}>
-        <div className={styles["career"]}>
-          <h2>Experience</h2>
-          {career.map(
-            ({ title, company, location, startDate, endDate, description }) => (
-              <div>
-                <div className={styles["header"]}>
-                  <h3>{company}</h3>
-                  <p>
-                    {startDate} - {endDate ? endDate : "Present"}
-                  </p>
-                </div>
-                <h4>
-                  {title} - {location}
-                </h4>
+      <div className={styles["career"]}>
+        <h2>Experience</h2>
+        {career.map(
+          ({ title, company, location, startDate, endDate, description }) => (
+            <div className={styles["container"]} key={`${company}-${title}`}>
+              <h3>{company}</h3>
+
+              <p>
+                {startDate} - {endDate ? endDate : "Present"}
+              </p>
+              <h4>{title}</h4>
+
+              <p>{location}</p>
+
+              <p className={styles["description"]}>
                 {description?.map((desc) => (
-                  <p>{desc}</p>
+                  <span>{desc}</span>
                 ))}
-              </div>
-            )
-          )}
-        </div>
-        <div className={styles["education"]}>
-          <h2>Education</h2>
-          {education.map(
-            ({
-              degree,
-              institution,
-              location,
-              startDate,
-              endDate,
-              description,
-            }) => (
-              <div>
-                <div className={styles["header"]}>
-                  <h3>{institution}</h3>
-                  <p>
-                    {startDate} - {endDate ? endDate : "Present"}
-                  </p>
-                </div>
-                <h4>
-                  {degree} - {location}
-                </h4>
+              </p>
+            </div>
+          )
+        )}
+      </div>
+      <div className={styles["education"]}>
+        <h2>Education</h2>
+        {education.map(
+          ({
+            degree,
+            institution,
+            location,
+            startDate,
+            endDate,
+            description,
+          }) => (
+            <div
+              className={styles["container"]}
+              key={`${degree}-${institution}`}
+            >
+              <h3>{institution}</h3>
+              <p>
+                {startDate} - {endDate ? endDate : "Present"}
+              </p>
+              <h4>{degree}</h4>
+              <p>{location}</p>
+              <p className={styles["description"]}>
                 {description?.map((desc) => (
-                  <p>{desc}</p>
+                  <span>{desc}</span>
                 ))}
-              </div>
-            )
-          )}
-        </div>
-        <div className={styles["volunteer"]}>
-          {volunteer.map(
-            ({
-              role,
-              organization,
-              location,
-              startDate,
-              endDate,
-              description,
-            }) => (
-              <div>
-                <h3>{role}</h3>
-                <h4>
-                  {organization} - {location}
-                </h4>
-                <p>
-                  {startDate} - {endDate ? endDate : "Present"}
-                </p>
-                {description?.map((desc) => (
-                  <p>{desc}</p>
-                ))}
-              </div>
-            )
-          )}
-        </div>
-        <div className={styles["certifications"]}>
-          {certifications.map(({ title, issuer, dateIssued, description }) => (
-            <div>
-              <h3>{title}</h3>
-              <h4>{issuer}</h4>
-              <p>{dateIssued}</p>
+              </p>
+            </div>
+          )
+        )}
+      </div>
+      <div className={styles["volunteer"]}>
+        {volunteer.map(
+          ({
+            role,
+            organization,
+            location,
+            startDate,
+            endDate,
+            description,
+          }) => (
+            <div className={styles["container"]}>
+              <h3>{role}</h3>
+              <h4>
+                {organization} - {location}
+              </h4>
+              <p>
+                {startDate} - {endDate ? endDate : "Present"}
+              </p>
               {description?.map((desc) => (
                 <p>{desc}</p>
               ))}
             </div>
-          ))}
-        </div>
+          )
+        )}
+      </div>
+      <div className={styles["certifications"]}>
+        {certifications.map(({ title, issuer, dateIssued, description }) => (
+          <div className={styles["container"]}>
+            <h3>{title}</h3>
+            <h4>{issuer}</h4>
+            <p>{dateIssued}</p>
+            {description?.map((desc) => (
+              <p>{desc}</p>
+            ))}
+          </div>
+        ))}
       </div>
     </Section>
   );
