@@ -74,7 +74,11 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                 </p>
               )}
 
-              <a href={link.href} target="_blank">
+              <a
+                href={link.href}
+                target="_blank"
+                title={`View ${title} on ${link.platform}`}
+              >
                 {PlatformIcons[link.platform]}
               </a>
             </div>
