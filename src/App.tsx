@@ -90,6 +90,18 @@ const projects: Project[] = [
     },
   },
   {
+    title: "Allflow",
+    category: "programming",
+    description:
+      "Allflow is a set of utilities for writing clean and easy to read JSX. It provides a set of components that can be used in the place of common React patterns the would normally disrupt the flow of the JSX in your codebase.",
+    image: { label: "Allflow Project", src: "/photos/mountain_portrait.jpg" },
+    technologies: ["TypeScript", "React", "JSX", "Github Actions"],
+    link: {
+      platform: "github",
+      href: "https://www.github.com/isfopo/allflow",
+    },
+  },
+  {
     title: "Grind",
     category: "programming",
     description: "A VS Code extension to keep track of tasks for the day.",
