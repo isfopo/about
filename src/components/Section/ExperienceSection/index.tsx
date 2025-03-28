@@ -1,31 +1,26 @@
 import { Section } from "components/Section";
 import styles from "./index.module.css";
 
-export interface CareerExperience {
+export interface Experience {
+  location: string;
+  startDate: string;
+  endDate?: string;
+  description?: string[];
+}
+
+export interface CareerExperience extends Experience {
   title: string;
   company: string;
-  location: string;
-  startDate: string;
-  endDate?: string;
-  description: string;
 }
 
-export interface EducationExperience {
+export interface EducationExperience extends Experience {
   degree: string;
   institution: string;
-  location: string;
-  startDate: string;
-  endDate?: string;
-  description?: string;
 }
 
-export interface VolunteerExperience {
+export interface VolunteerExperience extends Experience {
   role: string;
   organization: string;
-  location: string;
-  startDate: string;
-  endDate?: string;
-  description: string;
 }
 
 export interface Certification {
@@ -33,7 +28,7 @@ export interface Certification {
   issuer: string;
   dateIssued: string;
   expirationDate?: string;
-  description?: string;
+  description?: string[];
 }
 
 export interface ExperienceSectionProps {
@@ -66,7 +61,9 @@ export const ExperienceSection = ({
                 <h4>
                   {title} - {location}
                 </h4>
-                <p>{description}</p>
+                {description?.map((desc) => (
+                  <p>{desc}</p>
+                ))}
               </div>
             )
           )}
@@ -92,7 +89,9 @@ export const ExperienceSection = ({
                 <h4>
                   {degree} - {location}
                 </h4>
-                <p>{description}</p>
+                {description?.map((desc) => (
+                  <p>{desc}</p>
+                ))}
               </div>
             )
           )}
@@ -115,7 +114,9 @@ export const ExperienceSection = ({
                 <p>
                   {startDate} - {endDate ? endDate : "Present"}
                 </p>
-                <p>{description}</p>
+                {description?.map((desc) => (
+                  <p>{desc}</p>
+                ))}
               </div>
             )
           )}
@@ -126,7 +127,9 @@ export const ExperienceSection = ({
               <h3>{title}</h3>
               <h4>{issuer}</h4>
               <p>{dateIssued}</p>
-              <p>{description}</p>
+              {description?.map((desc) => (
+                <p>{desc}</p>
+              ))}
             </div>
           ))}
         </div>

@@ -49,7 +49,11 @@ const experience: ExperienceSectionProps = {
       location: "Remote",
       startDate: "May 2021",
       endDate: "Present",
-      description: "Developing web applications for various clients.",
+      description: [
+        "Engineered a scalable cloud service with Cloudflare Workers, facilitating precise user event tracking for advanced analytics insights.",
+        "Mastered and championed engineering group's best practices and coding standards in JavaScript and React.",
+        "Enhanced app on-boarding via React/Stripe experience, resulting in an increase in conversion rates.",
+      ],
     },
   ],
   education: [
@@ -59,7 +63,6 @@ const experience: ExperienceSectionProps = {
       location: "Louisville, KY",
       startDate: "2019",
       endDate: "2021",
-      description: "Graduated with honors, focusing on software development.",
     },
     {
       degree: "Bachelor of Music",
@@ -67,7 +70,6 @@ const experience: ExperienceSectionProps = {
       location: "Louisville, KY",
       startDate: "2010",
       endDate: "2015",
-      description: "Graduated with honors, focusing on software development.",
     },
   ],
 };
