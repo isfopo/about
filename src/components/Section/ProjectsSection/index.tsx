@@ -60,15 +60,19 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
             <div key={title} className={styles["slide"]}>
               <div className={styles["snapper"]}></div>
               <h3>{title}</h3>
+
               <div className={styles["image-container"]}>
                 <img src={image.src} aria-label={image.label} />
               </div>
+
               {technologies && technologies.length > 0 && (
                 <p>
                   <strong>Technologies:</strong> {technologies.join(", ")}
                 </p>
               )}
+
               <p>{description}</p>
+
               <a href={link.href} target="_blank">
                 {PlatformIcons[link.platform]}
               </a>
