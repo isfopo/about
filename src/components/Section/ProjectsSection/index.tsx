@@ -59,8 +59,10 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
           {projects.map(({ title, technologies, description, image, link }) => (
             <div key={title} className={styles["slide"]}>
               <div className={styles["snapper"]}></div>
-              <img src={image.src} aria-label={image.label} />
               <h3>{title}</h3>
+              <div className={styles["image-container"]}>
+                <img src={image.src} aria-label={image.label} />
+              </div>
               {technologies && technologies.length > 0 && (
                 <p>
                   <strong>Technologies:</strong> {technologies.join(", ")}
