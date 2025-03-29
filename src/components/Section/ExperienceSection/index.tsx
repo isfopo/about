@@ -52,15 +52,11 @@ export const ExperienceSection = ({
           ({ title, company, location, startDate, endDate, description }) => (
             <div className={styles["container"]} key={`${company}-${title}`}>
               <h3>{company}</h3>
-
               <p>
                 {startDate} - {endDate ? endDate : "Present"}
               </p>
-
               <h4>{title}</h4>
-
               <p>{location}</p>
-
               <p className={styles["description"]}>
                 {description?.map((desc) => (
                   <span>{desc}</span>
