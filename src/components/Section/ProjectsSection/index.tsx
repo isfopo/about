@@ -1,6 +1,5 @@
 import { Section } from "components/Section";
 import useEmblaCarousel from "embla-carousel-react";
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import Autoplay from "embla-carousel-autoplay";
 import { PlatformIcons } from "./PlatformIcons";
 import styles from "./index.module.css";
