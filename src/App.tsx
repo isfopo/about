@@ -16,7 +16,7 @@ const name = "Isaac Poole";
 const tag = "Full-Stack Software Developer";
 
 const about = `A motivated individual with a strong passion for continuous learning and innovation.
-Possessing a background in software engineering and music, I am driven by creativity and
+Possessing a background in software engineering and music performance, I am driven by creativity and
 dedicated to achieving excellence in my work and the technology I create.`;
 
 const skills: Skill[] = [
