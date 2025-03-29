@@ -1,6 +1,7 @@
 import { Section } from "components/Section";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import Autoplay from "embla-carousel-autoplay";
 import { PlatformIcons } from "./PlatformIcons";
 import styles from "./index.module.css";
 
@@ -49,7 +50,7 @@ export interface ProjectsSectionProps {
 }
 
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
-  const [emblaRef] = useEmblaCarousel({}, [WheelGesturesPlugin()]);
+  const [emblaRef] = useEmblaCarousel({}, [Autoplay()]);
 
   return (
     <Section subject="projects" className={styles["projects"]}>
