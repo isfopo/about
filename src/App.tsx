@@ -135,7 +135,7 @@ const projects: Project[] = [
     description: "sound \\ shape \\ place \\ memory",
     image: {
       label: "These Elements Combined",
-      src: "public/photos/mountain_portrait.jpg",
+      src: "/photos/projects/these-elements-combined.png",
     },
     link: {
       platform: "bandcamp",
