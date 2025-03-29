@@ -1,8 +1,8 @@
 import { Section } from "components/Section";
-
-import styles from "./index.module.css";
-import { PlatformIcons } from "./PlatformIcons";
 import useEmblaCarousel from "embla-carousel-react";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import { PlatformIcons } from "./PlatformIcons";
+import styles from "./index.module.css";
 
 export type ProjectCategory = "programming" | "music";
 
@@ -49,7 +49,7 @@ export interface ProjectsSectionProps {
 }
 
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef] = useEmblaCarousel({}, [WheelGesturesPlugin()]);
 
   return (
     <Section subject="projects" className={styles["projects"]}>
