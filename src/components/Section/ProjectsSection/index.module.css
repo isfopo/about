@@ -13,6 +13,7 @@
       background: var(--md-sys-color-secondary);
       padding: 1rem;
       border-radius: 1rem;
+      text-decoration: none;
 
       display: flex;
       flex-direction: column;
@@ -57,17 +58,11 @@
         flex-grow: 1;
       }
 
-      a {
+      svg {
+        align-self: flex-end;
         width: 4rem;
         height: 4rem;
-        align-self: flex-end;
-        justify-self: end;
-
-        svg {
-          width: 100%;
-          height: auto;
-          color: var(--md-sys-color-on-secondary);
-        }
+        color: var(--md-sys-color-on-secondary);
       }
     }
   }

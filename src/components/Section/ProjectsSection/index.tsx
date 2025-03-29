@@ -1,6 +1,7 @@
 import { Section } from "components/Section";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { PlatformIcons } from "./PlatformIcons";
 import styles from "./index.module.css";
 
@@ -49,7 +50,10 @@ export interface ProjectsSectionProps {
 }
 
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
-  const [emblaRef] = useEmblaCarousel({}, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({}, [
+    WheelGesturesPlugin(),
+    Autoplay({ stopOnMouseEnter: true }),
+  ]);
 
   return (
     <Section subject="projects" className={styles["projects"]}>
@@ -57,7 +61,14 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
       <div ref={emblaRef}>
         <div className={styles["container"]}>
           {projects.map(({ title, technologies, description, image, link }) => (
-            <div key={title} className={styles["slide"]}>
+            <a
+              key={title}
+              className={styles["slide"]}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`View ${title} on ${link.platform}`}
+            >
               <h3>{title}</h3>
 
               <div className={styles["image-container"]}>
@@ -74,15 +85,8 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
                 </p>
               )}
 
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={`View ${title} on ${link.platform}`}
-              >
-                {PlatformIcons[link.platform]}
-              </a>
-            </div>
+              {PlatformIcons[link.platform]}
+            </a>
           ))}
         </div>
       </div>
