@@ -56,6 +56,7 @@ export const ExperienceSection = ({
               <p>
                 {startDate} - {endDate ? endDate : "Present"}
               </p>
+
               <h4>{title}</h4>
 
               <p>{location}</p>
