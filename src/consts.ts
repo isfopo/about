@@ -1,7 +1,7 @@
 export const SECTIONS = [
   "about",
-  "experience",
   "skills",
+  "experience",
   "projects",
   "contact",
 ] as const;

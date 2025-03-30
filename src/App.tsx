@@ -154,8 +154,8 @@ function App() {
     <>
       <Header sections={SECTIONS} socials={socials} />
       <AboutSection name={name} tag={tag} about={about} />
-      <ExperienceSection {...experience} />
       <SkillsSection skills={skills} />
+      <ExperienceSection {...experience} />
       <ProjectsSection projects={projects} />
       <ContactSection {...contact} />
     </>
