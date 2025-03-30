@@ -10,7 +10,7 @@
       width: 90%;
       flex: 0 0 90%;
       user-select: none;
-      background: var(--md-sys-color-secondary);
+      background: var(--md-sys-color-secondary-fixed);
       padding: 1rem;
       border-radius: 1rem;
       text-decoration: none;
@@ -18,6 +18,10 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      &:hover {
+        opacity: 0.9;
+      }
 
       @media (min-width: 768px) {
         gap: 1rem;
