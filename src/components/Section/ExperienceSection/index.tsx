@@ -106,7 +106,10 @@ export const ExperienceSection = ({
             endDate,
             description,
           }) => (
-            <div className={styles["container"]}>
+            <div
+              className={styles["container"]}
+              key={`${organization}-${role}`}
+            >
               <h3>{role}</h3>
               <h4>
                 {organization} - {location}
@@ -123,7 +126,7 @@ export const ExperienceSection = ({
       </div>
       <div className={styles["certifications"]}>
         {certifications.map(({ title, issuer, dateIssued, description }) => (
-          <div className={styles["container"]}>
+          <div className={styles["container"]} key={`${issuer}-${title}`}>
             <h3>{title}</h3>
             <h4>{issuer}</h4>
             <p>{dateIssued}</p>
