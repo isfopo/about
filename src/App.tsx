@@ -82,7 +82,7 @@ const projects: Project[] = [
     technologies: ["Python", "WebSockets", "Ableton Live API", "Svelte"],
     image: {
       label: "Live Remote Project",
-      src: "/photos/mountain_portrait.jpg",
+      src: "photos/mountain_portrait.jpg",
     },
     link: {
       platform: "github",
@@ -94,7 +94,7 @@ const projects: Project[] = [
     category: "programming",
     description:
       "Allflow is a set of utilities for writing clean and easy to read JSX. It provides a set of components that can be used in the place of common React patterns the would normally disrupt the flow of the JSX in your codebase.",
-    image: { label: "Allflow Project", src: "/photos/mountain_portrait.jpg" },
+    image: { label: "Allflow Project", src: "photos/mountain_portrait.jpg" },
     technologies: ["TypeScript", "React", "JSX", "Github Actions"],
     link: {
       platform: "github",
@@ -108,7 +108,7 @@ const projects: Project[] = [
     technologies: ["TypeScript", "VS Code Extension API"],
     image: {
       label: "Grind VS Code extension",
-      src: "public/photos/mountain_portrait.jpg",
+      src: "photos/mountain_portrait.jpg",
     },
     link: {
       platform: "github",
@@ -122,7 +122,7 @@ const projects: Project[] = [
       "An experimental, electronic, improvisatory guitar and drum duo.",
     image: {
       label: "genra // non // genra",
-      src: "public/photos/mountain_portrait.jpg",
+      src: "photos/mountain_portrait.jpg",
     },
     link: {
       platform: "bandcamp",
@@ -135,7 +135,7 @@ const projects: Project[] = [
     description: "sound \\ shape \\ place \\ memory",
     image: {
       label: "These Elements Combined",
-      src: "/photos/projects/these-elements-combined.png",
+      src: "photos/projects/these-elements-combined.png",
     },
     link: {
       platform: "bandcamp",
