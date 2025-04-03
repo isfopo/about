@@ -57,7 +57,7 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
 
   return (
     <Section subject="projects" className={styles["projects"]}>
-      <h1>Projects</h1>
+      <h3>Projects</h3>
       <div ref={emblaRef}>
         <div className={styles["container"]}>
           {projects.map(({ title, technologies, description, image, link }) => (
@@ -69,7 +69,7 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
               rel="noopener noreferrer"
               title={`View ${title} on ${link.platform}`}
             >
-              <h3>{title}</h3>
+              <h4>{title}</h4>
 
               <div className={styles["image-container"]}>
                 <img src={image.src} aria-label={image.label} />

@@ -51,11 +51,11 @@ export const ExperienceSection = ({
         {career.map(
           ({ title, company, location, startDate, endDate, description }) => (
             <div className={styles["container"]} key={`${company}-${title}`}>
-              <h3>{company}</h3>
+              <h4>{company}</h4>
               <p>
                 {startDate} - {endDate ? endDate : "Present"}
               </p>
-              <h4>{title}</h4>
+              <h5>{title}</h5>
               <p>{location}</p>
               <p className={styles["description"]}>
                 {description?.map((desc) => (
@@ -81,11 +81,11 @@ export const ExperienceSection = ({
               className={styles["container"]}
               key={`${degree}-${institution}`}
             >
-              <h3>{institution}</h3>
+              <h4>{institution}</h4>
               <p>
                 {startDate} - {endDate ? endDate : "Present"}
               </p>
-              <h4>{degree}</h4>
+              <h5>{degree}</h5>
               <p>{location}</p>
               <p className={styles["description"]}>
                 {description?.map((desc) => (
@@ -110,10 +110,10 @@ export const ExperienceSection = ({
               className={styles["container"]}
               key={`${organization}-${role}`}
             >
-              <h3>{role}</h3>
-              <h4>
+              <h4>{role}</h4>
+              <h5>
                 {organization} - {location}
-              </h4>
+              </h5>
               <p>
                 {startDate} - {endDate ? endDate : "Present"}
               </p>
@@ -127,8 +127,8 @@ export const ExperienceSection = ({
       <div className={styles["certifications"]}>
         {certifications.map(({ title, issuer, dateIssued, description }) => (
           <div className={styles["container"]} key={`${issuer}-${title}`}>
-            <h3>{title}</h3>
-            <h4>{issuer}</h4>
+            <h4>{title}</h4>
+            <h5>{issuer}</h5>
             <p>{dateIssued}</p>
             {description?.map((desc) => (
               <p>{desc}</p>

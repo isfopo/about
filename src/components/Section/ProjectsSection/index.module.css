@@ -1,6 +1,11 @@
 .projects {
   padding: 0;
 
+  h3 {
+    width: 100%;
+    text-align: left;
+  }
+
   .container {
     width: 90vw;
     gap: 2rem;

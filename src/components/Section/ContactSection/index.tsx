@@ -11,7 +11,7 @@ export interface Contact {
 export const ContactSection = (contact: Contact) => {
   return (
     <Section subject="contact" className={styles["contact"]}>
-      <h1>Contact</h1>
+      <h3>Contact</h3>
       <div className={styles["container"]}>
         {Object.keys(contact).map((key) => {
           const value = contact[key as keyof Contact];

@@ -13,7 +13,7 @@ export interface SkillsSectionProps {
 export const SkillsSection = ({ skills }: SkillsSectionProps) => {
   return (
     <Section subject="skills" className={styles["skills"]}>
-      <h2>Skills</h2>
+      <h3>Skills</h3>
       <div className={styles["container"]}>
         {skills.map(({ name, level }) => (
           <span className={styles["skill"]} key={name}>

@@ -11,10 +11,10 @@ export interface AboutSectionProps {
 export const AboutSection = ({ name, tag, about }: AboutSectionProps) => {
   return (
     <Section subject="about" className={styles["about"]}>
-      <Frame src={"public/photos/mountain_portrait.jpg"} />
+      <Frame src={"photos/mountain_portrait.jpg"} />
       <div className={styles["container"]}>
-        <h2>{name}</h2>
-        <h3>{tag}</h3>
+        <h1>{name}</h1>
+        <h2>{tag}</h2>
         <p>{about}</p>
       </div>
     </Section>
