@@ -49,6 +49,7 @@ h6 {
   user-select: none;
   text-align: left;
   width: 100%;
+  color: var(--md-sys-color-on-surface);
 }
 
 h1 {
@@ -66,7 +67,11 @@ h3 {
   font-size: 24px;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: var(--md-sys-color-on-surface);
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 button {
