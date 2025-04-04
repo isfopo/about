@@ -10,7 +10,7 @@
       width: 90%;
       flex: 0 0 90%;
       user-select: none;
-      background: var(--md-sys-color-secondary-fixed);
+      background: var(--md-sys-color-secondary-container);
       padding: 1rem;
       border-radius: 1rem;
       text-decoration: none;
