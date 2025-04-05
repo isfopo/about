@@ -30,6 +30,7 @@ export interface Project {
   /**
    * An image object that contains the source URL and an aria-label for accessibility.
    * This image should represent the project visually.
+   * Currently, the image is not used in the component.
    */
   image: {
     src: string;
@@ -60,7 +61,7 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
       <h3>Projects</h3>
       <div ref={emblaRef}>
         <div className={styles["container"]}>
-          {projects.map(({ title, technologies, description, image, link }) => (
+          {projects.map(({ title, technologies, description, link }) => (
             <a
               key={title}
               className={styles["slide"]}
@@ -70,10 +71,6 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
               title={`View ${title} on ${link.platform}`}
             >
               <h4>{title}</h4>
-
-              <div className={styles["image-container"]}>
-                <img src={image.src} aria-label={image.label} />
-              </div>
 
               <p className={styles["description"]}>{description}</p>
 
