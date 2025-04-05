@@ -53,7 +53,7 @@ export interface ProjectsSectionProps {
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
   const [emblaRef] = useEmblaCarousel({}, [
     WheelGesturesPlugin(),
-    Autoplay({ stopOnMouseEnter: true }),
+    Autoplay({ stopOnMouseEnter: true, jump: false }),
   ]);
 
   return (
