@@ -1,8 +1,8 @@
 import "./App.css";
 import { Header } from "components/Header";
-import { SocialPlatformLink } from "components/Header/Socials";
+import { SocialPlatformLink } from "components/Socials";
 import { AboutSection } from "components/Section/AboutSection";
-import { Contact, ContactSection } from "components/Section/ContactSection";
+import { Contacts, ContactSection } from "components/Section/ContactSection";
 import {
   ExperienceSection,
   ExperienceSectionProps,
@@ -144,7 +144,7 @@ const projects: Project[] = [
   },
 ];
 
-const contact: Contact = {
+const contacts: Contacts = {
   tel: "(502) 220-8265",
   mailto: "isaacpoolemusic@gmail.com",
 };
@@ -157,7 +157,7 @@ function App() {
       <SkillsSection skills={skills} />
       <ExperienceSection {...experience} />
       <ProjectsSection projects={projects} />
-      <ContactSection {...contact} />
+      <ContactSection contacts={contacts} socials={socials} />
     </>
   );
 }
