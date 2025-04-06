@@ -47,7 +47,7 @@ export const ExperienceSection = ({
   return (
     <Section subject="experience" className={styles["experience"]}>
       <div className={styles["career"]}>
-        <h2>Experience</h2>
+        <h3>Experience</h3>
         {career.map(
           ({ title, company, location, startDate, endDate, description }) => (
             <div className={styles["container"]} key={`${company}-${title}`}>
@@ -67,7 +67,7 @@ export const ExperienceSection = ({
         )}
       </div>
       <div className={styles["education"]}>
-        <h2>Education</h2>
+        <h3>Education</h3>
         {education.map(
           ({
             degree,

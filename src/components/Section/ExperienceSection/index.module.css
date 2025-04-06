@@ -10,8 +10,10 @@
     width: 100%;
   }
 
-  h2 {
-    text-align: right;
+  @media (min-width: 768px) {
+    h3 {
+      text-align: right;
+    }
   }
 
   .container {
