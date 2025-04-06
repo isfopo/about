@@ -1,8 +1,9 @@
 import { Section } from "components/Section";
 import styles from "./index.module.css";
+import { useCallback } from "react";
 
 export interface Experience {
-  location: string;
+  location?: string;
   startDate: string;
   endDate?: string;
   description?: string[];
@@ -44,97 +45,61 @@ export const ExperienceSection = ({
   volunteer = [],
   certifications = [],
 }: ExperienceSectionProps) => {
+  const item = useCallback(
+    ({
+      title,
+      company,
+      location,
+      startDate,
+      endDate,
+      description,
+    }: { title: string; company: string } & Experience): React.ReactElement => {
+      return (
+        <div className={styles["container"]} key={`${company}-${title}`}>
+          <h4>{company}</h4>
+          <p>
+            {startDate} - {endDate ? endDate : "Present"}
+          </p>
+          <h5>{title}</h5>
+          <h6>{location}</h6>
+          <p className={styles["description"]}>
+            {description?.map((desc: string) => (
+              <span>{desc}</span>
+            ))}
+          </p>
+        </div>
+      );
+    },
+    []
+  );
+
   return (
     <Section subject="experience" className={styles["experience"]}>
       <div className={styles["career"]}>
         <h3>Experience</h3>
-        {career.map(
-          ({ title, company, location, startDate, endDate, description }) => (
-            <div className={styles["container"]} key={`${company}-${title}`}>
-              <h4>{company}</h4>
-              <p>
-                {startDate} - {endDate ? endDate : "Present"}
-              </p>
-              <h5>{title}</h5>
-              <p>{location}</p>
-              <p className={styles["description"]}>
-                {description?.map((desc) => (
-                  <span>{desc}</span>
-                ))}
-              </p>
-            </div>
-          )
-        )}
+        {career.map(item)}
       </div>
       <div className={styles["education"]}>
         <h3>Education</h3>
-        {education.map(
-          ({
-            degree,
-            institution,
-            location,
-            startDate,
-            endDate,
-            description,
-          }) => (
-            <div
-              className={styles["container"]}
-              key={`${degree}-${institution}`}
-            >
-              <h4>{institution}</h4>
-              <p>
-                {startDate} - {endDate ? endDate : "Present"}
-              </p>
-              <h5>{degree}</h5>
-              <p>{location}</p>
-              <p className={styles["description"]}>
-                {description?.map((desc) => (
-                  <span>{desc}</span>
-                ))}
-              </p>
-            </div>
-          )
+        {education.map(({ degree, institution, ...props }) =>
+          item({ title: degree, company: institution, ...props })
         )}
       </div>
       <div className={styles["volunteer"]}>
-        {volunteer.map(
-          ({
-            role,
-            organization,
-            location,
-            startDate,
-            endDate,
-            description,
-          }) => (
-            <div
-              className={styles["container"]}
-              key={`${organization}-${role}`}
-            >
-              <h4>{role}</h4>
-              <h5>
-                {organization} - {location}
-              </h5>
-              <p>
-                {startDate} - {endDate ? endDate : "Present"}
-              </p>
-              {description?.map((desc) => (
-                <p>{desc}</p>
-              ))}
-            </div>
-          )
+        {volunteer.map(({ role, organization, ...props }) =>
+          item({ title: role, company: organization, ...props })
         )}
       </div>
       <div className={styles["certifications"]}>
-        {certifications.map(({ title, issuer, dateIssued, description }) => (
-          <div className={styles["container"]} key={`${issuer}-${title}`}>
-            <h4>{title}</h4>
-            <h5>{issuer}</h5>
-            <p>{dateIssued}</p>
-            {description?.map((desc) => (
-              <p>{desc}</p>
-            ))}
-          </div>
-        ))}
+        {certifications.map(
+          ({ dateIssued, expirationDate, issuer, ...props }) =>
+            item({
+              company: issuer,
+              startDate: dateIssued,
+              endDate: expirationDate,
+              ...props,
+            })
+        )}
       </div>
     </Section>
   );
