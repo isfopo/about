@@ -56,12 +56,14 @@ export const ExperienceSection = ({
     }: { title: string; company: string } & Experience): React.ReactElement => {
       return (
         <div className={styles["container"]} key={`${company}-${title}`}>
-          <h4>{company}</h4>
+          <p>
+            <strong>{company}</strong>
+          </p>
           <p>
             {startDate} - {endDate ? endDate : "Present"}
           </p>
-          <h5>{title}</h5>
-          <h6>{location}</h6>
+          <p>{title}</p>
+          <p>{location}</p>
           <p className={styles["description"]}>
             {description?.map((desc: string) => (
               <span>{desc}</span>
