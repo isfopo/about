@@ -1,6 +1,6 @@
 import "./App.css";
 import { Header } from "components/Header";
-import { SocialPlatformLink, Socials } from "components/Socials";
+import { SocialPlatformLink } from "components/Socials";
 import { AboutSection } from "components/Section/AboutSection";
 import { Contacts, ContactSection } from "components/Section/ContactSection";
 import {
