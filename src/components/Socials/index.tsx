@@ -13,11 +13,11 @@ export interface SocialsProps {
 }
 
 export const Socials = ({ platforms }: SocialsProps) => (
-  <span className={styles["socials"]}>
+  <div className={styles["socials"]}>
     {platforms.map(({ label, href }) => (
       <a href={href} aria-label={label} target="_blank" key={label}>
         {SocialIcons[label] ?? <Link />}
       </a>
     ))}
-  </span>
+  </div>
 );

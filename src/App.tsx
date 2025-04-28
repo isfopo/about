@@ -1,6 +1,6 @@
 import "./App.css";
 import { Header } from "components/Header";
-import { SocialPlatformLink } from "components/Socials";
+import { SocialPlatformLink, Socials } from "components/Socials";
 import { AboutSection } from "components/Section/AboutSection";
 import { Contacts, ContactSection } from "components/Section/ContactSection";
 import {
@@ -10,6 +10,7 @@ import {
 import { Project, ProjectsSection } from "components/Section/ProjectsSection";
 import { Skill, SkillsSection } from "components/Section/SkillsSection";
 import { SECTIONS } from "consts";
+import { Footer } from "components/Footer";
 
 const name = "Isaac Poole";
 
@@ -156,6 +157,7 @@ function App() {
       <ExperienceSection {...experience} />
       <ProjectsSection projects={projects} />
       <ContactSection contacts={contacts} socials={socials} />
+      <Footer socials={socials} />
     </>
   );
 }

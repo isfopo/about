@@ -1,7 +1,7 @@
 import { Section } from "components/Section";
 import { ContactIcons } from "./ContactIcons";
 import styles from "./index.module.css";
-import { SocialPlatformLink, Socials } from "components/Socials";
+import { SocialPlatformLink } from "components/Socials";
 
 export interface Contacts {
   tel: `(${string}) ${string}-${string}`;
@@ -18,7 +18,7 @@ export interface ContactSectionProps {
   socials: SocialPlatformLink[];
 }
 
-export const ContactSection = ({ contacts, socials }: ContactSectionProps) => {
+export const ContactSection = ({ contacts }: ContactSectionProps) => {
   return (
     <Section subject="contact" className={styles["contact"]}>
       <h3>Contact</h3>
@@ -39,7 +39,6 @@ export const ContactSection = ({ contacts, socials }: ContactSectionProps) => {
           );
         })}
       </div>
-      <Socials platforms={socials} />
     </Section>
   );
 };
