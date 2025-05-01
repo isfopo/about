@@ -8,9 +8,13 @@ export interface Skill {
 
 export interface SkillsSectionProps {
   skills: Skill[];
+  additionalSkills: string[];
 }
 
-export const SkillsSection = ({ skills }: SkillsSectionProps) => {
+export const SkillsSection = ({
+  skills,
+  additionalSkills,
+}: SkillsSectionProps) => {
   return (
     <Section subject="skills" className={styles["skills"]}>
       <h3>Skills</h3>
@@ -21,6 +25,11 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
             <progress id={name} value={level} max={10} />
           </span>
         ))}
+      </div>
+      <div className={styles["additional-skills"]}>
+        <p>
+          Additional Skills: <strong>{additionalSkills.join(" ⁃ ")}</strong>
+        </p>
       </div>
     </Section>
   );

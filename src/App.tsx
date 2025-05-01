@@ -25,6 +25,24 @@ const skills: Skill[] = [
   { name: "Python", level: 7 },
 ];
 
+const additionalSkills: string[] = [
+  "Ableton Live API",
+  "Svelte",
+  "WebSockets",
+  "Stripe",
+  "Git",
+  "Github Actions",
+  "Cloudflare Workers",
+  "PostgreSQL",
+  "Express",
+  "Node.js",
+  "REST APIs",
+  "HTML",
+  "CSS",
+  "Sass",
+  "VS Code Extension API",
+];
+
 const socials: SocialPlatformLink[] = [
   {
     label: "github",
@@ -153,7 +171,7 @@ function App() {
     <>
       <Header sections={SECTIONS} socials={socials} />
       <AboutSection name={name} tag={tag} about={about} />
-      <SkillsSection skills={skills} />
+      <SkillsSection skills={skills} additionalSkills={additionalSkills} />
       <ExperienceSection {...experience} />
       <ProjectsSection projects={projects} />
       <ContactSection contacts={contacts} socials={socials} />
