@@ -102,7 +102,7 @@ export const Printable = ({
         </div>
 
         <div className={styles["col-right"]}>
-          <ExperienceSection {...experience} />
+          <ExperienceSection {...experience} className={styles["experience"]} />
 
           <div className={styles["projects"]}>
             <h3>Projects</h3>

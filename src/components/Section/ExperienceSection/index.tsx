@@ -32,7 +32,11 @@ export interface Certification {
   description?: string[];
 }
 
-export interface ExperienceSectionProps {
+export interface ExperienceSectionProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLElement>,
+    HTMLElement
+  > {
   career?: CareerExperience[];
   education?: EducationExperience[];
   volunteer?: VolunteerExperience[];
@@ -44,6 +48,8 @@ export const ExperienceSection = ({
   education = [],
   volunteer = [],
   certifications = [],
+  className,
+  ...props
 }: ExperienceSectionProps) => {
   const item = useCallback(
     ({
@@ -76,7 +82,11 @@ export const ExperienceSection = ({
   );
 
   return (
-    <Section subject="experience" className={styles["experience"]}>
+    <Section
+      subject="experience"
+      className={`${styles["experience"]} ${className}`}
+      {...props}
+    >
       <div className={styles["career"]}>
         <h3>Experience</h3>
         {career.map(item)}
