@@ -2,16 +2,12 @@ import { Section } from "components/Section";
 import { ContactIcons } from "./ContactIcons";
 import styles from "./index.module.css";
 import { SocialPlatformLink } from "components/Socials";
+import { ContactLabels } from "./ContactLabels";
 
 export interface Contacts {
   tel: `(${string}) ${string}-${string}`;
   mailto: `${string}@${string}.${string}`;
 }
-
-const labels: Record<keyof Contacts, string> = {
-  tel: "Phone",
-  mailto: "Email",
-};
 
 export interface ContactSectionProps {
   contacts: Contacts;
@@ -25,7 +21,7 @@ export const ContactSection = ({ contacts }: ContactSectionProps) => {
       <div className={styles["container"]}>
         {Object.keys(contacts).map((key) => {
           const value = contacts[key as keyof Contacts];
-          const label = labels[key as keyof Contacts];
+          const label = ContactLabels[key as keyof Contacts];
           const icon = ContactIcons[key as keyof Contacts];
 
           return (

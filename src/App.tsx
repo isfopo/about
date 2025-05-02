@@ -178,8 +178,8 @@ function App() {
 
   const handleDownload = () => {
     (targetRef.current as HTMLDialogElement).showModal();
-    toPDF();
-    (targetRef.current as HTMLDialogElement).close();
+    // toPDF();
+    // (targetRef.current as HTMLDialogElement).close();
   };
 
   return (

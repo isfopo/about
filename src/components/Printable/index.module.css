@@ -2,14 +2,47 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1080px;
   height: 100%;
   color: #000000;
-  margin: 64px;
-  padding: 2rem;
-  z-index: -1;
+  background-color: #ffffff;
+  border: none;
 
-  h1 {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: masonry;
+  gap: 2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     color: #000000;
+  }
+}
+
+.about {
+  display: grid;
+  text-align: left;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: start;
+    margin: 0;
+    margin-right: 5rem;
+
+    p {
+      text-align: left;
+    }
   }
 }
