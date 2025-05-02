@@ -8,10 +8,12 @@
   background-color: #ffffff;
   border: none;
 
-  display: grid;
-  grid-template-columns: 30% auto;
-  grid-template-rows: masonry;
-  gap: 2rem;
+  section {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: masonry;
+    gap: 2rem;
+  }
 
   h1,
   h2,
@@ -27,6 +29,8 @@
 .about {
   display: grid;
   text-align: left;
+  grid-template-columns: 30% auto;
+  gap: 2rem;
 
   img {
     width: 100%;
@@ -34,15 +38,8 @@
     margin: auto;
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 100%;
-    justify-items: start;
-    margin: 0;
+  .profile {
+    margin: auto 0;
     margin-right: 5rem;
-
-    p {
-      text-align: left;
-    }
   }
 }

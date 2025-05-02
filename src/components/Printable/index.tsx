@@ -37,61 +37,67 @@ export const Printable = ({
 }: PrintableProps) => {
   return (
     <dialog ref={ref} className={styles["printable"]}>
-      <div className={styles["about"]}>
+      <header className={styles["about"]}>
         <Frame src={"photos/mountain_portrait.jpg"} />
-        <h1>{name}</h1>
-        <h2>{tag}</h2>
-        <p>{about}</p>
-      </div>
-
-      <ExperienceSection {...experience} />
-
-      <div className={styles["skills"]}>
-        <h3>Skills</h3>
-        <div className={styles["container"]}>
-          {skills.map(({ name, level }) => (
-            <span className={styles["skill"]} key={name}>
-              <label htmlFor={name}>{name}</label>
-              <progress id={name} value={level} max={10} />
-            </span>
-          ))}
+        <div className={styles["profile"]}>
+          <h1>{name}</h1>
+          <h2>{tag}</h2>
+          <p>{about}</p>
         </div>
-        <div className={styles["additional-skills"]}>
-          <p>
-            Additional Skills: <strong>{additionalSkills.join(" ⁃ ")}</strong>
-          </p>
+      </header>
+
+      <section>
+        <div className={styles["skills"]}>
+          <h3>Skills</h3>
+          <div className={styles["container"]}>
+            {skills.map(({ name, level }) => (
+              <span className={styles["skill"]} key={name}>
+                <label htmlFor={name}>{name}</label>
+                <progress id={name} value={level} max={10} />
+              </span>
+            ))}
+          </div>
+          <div className={styles["additional-skills"]}>
+            <p>
+              Additional Skills: <strong>{additionalSkills.join(" ⁃ ")}</strong>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className={styles["projects"]}>
-        <h3>Projects</h3>
-        <div className={styles["container"]}>
-          {projects.map(({ title, technologies, description, link }) => (
-            <a
-              key={title}
-              className={styles["slide"]}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`View ${title} on ${link.platform}`}
-            >
-              <h4>{title}</h4>
+        <div>
+          <ExperienceSection {...experience} />
 
-              <p className={styles["description"]}>{description}</p>
+          <div className={styles["projects"]}>
+            <h3>Projects</h3>
+            <div className={styles["container"]}>
+              {projects.map(({ title, technologies, description, link }) => (
+                <a
+                  key={title}
+                  className={styles["slide"]}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`View ${title} on ${link.platform}`}
+                >
+                  <h4>{title}</h4>
 
-              {technologies && technologies.length > 0 && (
-                <p>
-                  <strong>Technologies:</strong>
-                  <br />
-                  {technologies.join(", ")}
-                </p>
-              )}
-            </a>
-          ))}
+                  <p className={styles["description"]}>{description}</p>
+
+                  {technologies && technologies.length > 0 && (
+                    <p>
+                      <strong>Technologies:</strong>
+                      <br />
+                      {technologies.join(", ")}
+                    </p>
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles["contact"]}>
+      <footer className={styles["contact"]}>
         <h3>Contact</h3>
         <div className={styles["container"]}>
           {Object.keys(contacts).map((key) => {
@@ -110,7 +116,7 @@ export const Printable = ({
             );
           })}
         </div>
-      </div>
+      </footer>
     </dialog>
   );
 };
