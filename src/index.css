@@ -22,6 +22,7 @@ body {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 100vw;
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-background);
   overflow-x: hidden;
@@ -99,4 +100,25 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media print {
+  header,
+  footer,
+  aside,
+  nav,
+  form,
+  iframe,
+  .menu,
+  .hide-on-print {
+    display: none !important;
+  }
+
+  section {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--md-sys-color-surface) !important;
+  }
 }

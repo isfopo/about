@@ -11,6 +11,8 @@ import { Project, ProjectsSection } from "components/Section/ProjectsSection";
 import { Skill, SkillsSection } from "components/Section/SkillsSection";
 import { SECTIONS } from "consts";
 import { Footer } from "components/Footer";
+import { Margin, usePDF } from "react-to-pdf";
+import { Printable } from "components/Printable";
 
 const name = "Isaac Poole";
 
@@ -167,15 +169,47 @@ const contacts: Contacts = {
 };
 
 function App() {
+  const { targetRef, toPDF } = usePDF({
+    filename: `${name}-resume.pdf`,
+    page: {
+      margin: Margin.MEDIUM,
+    },
+  });
+
+  const handleDownload = () => {
+    (targetRef.current as HTMLDialogElement).showModal();
+    toPDF();
+    (targetRef.current as HTMLDialogElement).close();
+  };
+
   return (
     <>
-      <Header sections={SECTIONS} socials={socials} />
-      <AboutSection name={name} tag={tag} about={about} />
-      <SkillsSection skills={skills} additionalSkills={additionalSkills} />
-      <ExperienceSection {...experience} />
-      <ProjectsSection projects={projects} />
-      <ContactSection contacts={contacts} socials={socials} />
-      <Footer socials={socials} />
+      <>
+        <button onClick={handleDownload} className="print-button">
+          Print
+        </button>
+        <Header sections={SECTIONS} socials={socials} />
+        <AboutSection name={name} tag={tag} about={about} />
+        <SkillsSection skills={skills} additionalSkills={additionalSkills} />
+        <ExperienceSection {...experience} />
+        <ProjectsSection projects={projects} />
+        <ContactSection contacts={contacts} socials={socials} />
+        <Footer socials={socials} />
+      </>
+      <div className="hidden">
+        <Printable
+          ref={targetRef}
+          name={name}
+          tag={tag}
+          about={about}
+          experience={experience}
+          skills={skills}
+          additionalSkills={additionalSkills}
+          projects={projects}
+          contacts={contacts}
+          socials={socials}
+        />
+      </div>
     </>
   );
 }
