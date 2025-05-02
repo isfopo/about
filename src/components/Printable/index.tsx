@@ -34,6 +34,7 @@ export const Printable = ({
   experience,
   projects,
   contacts,
+  socials,
 }: PrintableProps) => {
   return (
     <dialog ref={ref} className={styles["printable"]}>
@@ -46,21 +47,56 @@ export const Printable = ({
         </div>
       </header>
 
-      <section>
-        <div className={styles["skills"]}>
-          <h3>Skills</h3>
-          <div className={styles["container"]}>
-            {skills.map(({ name, level }) => (
-              <span className={styles["skill"]} key={name}>
-                <label htmlFor={name}>{name}</label>
-                <progress id={name} value={level} max={10} />
-              </span>
+      <div className={styles["content"]}>
+        <div>
+          <div className={styles["socials"]}>
+            {socials.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`View ${label} profile`}
+              >
+                {label}
+              </a>
             ))}
           </div>
-          <div className={styles["additional-skills"]}>
-            <p>
-              Additional Skills: <strong>{additionalSkills.join(" ⁃ ")}</strong>
-            </p>
+
+          <div className={styles["container"]}>
+            {Object.keys(contacts).map((key) => {
+              const value = contacts[key as keyof Contacts];
+              const label = ContactLabels[key as keyof Contacts];
+              const icon = ContactIcons[key as keyof Contacts];
+
+              return (
+                <a key={key} href={`${key}:${contacts[key as keyof Contacts]}`}>
+                  <div className={styles["icon"]}>{icon}</div>
+                  <div className={styles["text"]}>
+                    <p>{label}</p>
+                    <p>{value}</p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+
+          <div className={styles["skills"]}>
+            <h3>Skills</h3>
+            <div className={styles["container"]}>
+              {skills.map(({ name, level }) => (
+                <span className={styles["skill"]} key={name}>
+                  <label htmlFor={name}>{name}</label>
+                  <progress id={name} value={level} max={10} />
+                </span>
+              ))}
+            </div>
+            <div className={styles["additional-skills"]}>
+              <p>
+                Additional Skills:{" "}
+                <strong>{additionalSkills.join(" ⁃ ")}</strong>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -95,28 +131,7 @@ export const Printable = ({
             </div>
           </div>
         </div>
-      </section>
-
-      <footer className={styles["contact"]}>
-        <h3>Contact</h3>
-        <div className={styles["container"]}>
-          {Object.keys(contacts).map((key) => {
-            const value = contacts[key as keyof Contacts];
-            const label = ContactLabels[key as keyof Contacts];
-            const icon = ContactIcons[key as keyof Contacts];
-
-            return (
-              <a key={key} href={`${key}:${contacts[key as keyof Contacts]}`}>
-                <div className={styles["icon"]}>{icon}</div>
-                <div className={styles["text"]}>
-                  <p>{label}</p>
-                  <p>{value}</p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </footer>
+      </div>
     </dialog>
   );
 };

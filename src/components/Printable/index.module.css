@@ -8,11 +8,12 @@
   background-color: #ffffff;
   border: none;
 
-  section {
+  .content {
     display: grid;
     grid-template-columns: 30% auto;
     grid-template-rows: masonry;
     gap: 2rem;
+    margin: 0;
   }
 
   h1,
@@ -41,5 +42,21 @@
   .profile {
     margin: auto 0;
     margin-right: 5rem;
+  }
+}
+
+.skills {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      text-align: left;
+    }
   }
 }
