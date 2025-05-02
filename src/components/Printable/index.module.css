@@ -8,12 +8,30 @@
   background-color: #ffffff;
   border: none;
 
+  h3 {
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+  }
+
   .content {
     display: grid;
     grid-template-columns: 30% auto;
-    grid-template-rows: masonry;
     gap: 2rem;
     margin: 0;
+
+    .col-left {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+
+    .col-right {
+      h3 {
+        text-align: right;
+      }
+    }
   }
 
   h1,

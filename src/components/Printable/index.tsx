@@ -48,7 +48,8 @@ export const Printable = ({
       </header>
 
       <div className={styles["content"]}>
-        <div>
+        <div className={styles["col-left"]}>
+          <h3>Contact</h3>
           <div className={styles["socials"]}>
             {socials.map(({ label, href }) => (
               <a
@@ -63,7 +64,7 @@ export const Printable = ({
             ))}
           </div>
 
-          <div className={styles["container"]}>
+          <div className={styles["contacts"]}>
             {Object.keys(contacts).map((key) => {
               const value = contacts[key as keyof Contacts];
               const label = ContactLabels[key as keyof Contacts];
@@ -100,7 +101,7 @@ export const Printable = ({
           </div>
         </div>
 
-        <div>
+        <div className={styles["col-right"]}>
           <ExperienceSection {...experience} />
 
           <div className={styles["projects"]}>
