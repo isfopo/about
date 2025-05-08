@@ -11,8 +11,6 @@ import { Project, ProjectsSection } from "components/Section/ProjectsSection";
 import { Skill, SkillsSection } from "components/Section/SkillsSection";
 import { SECTIONS } from "consts";
 import { Footer } from "components/Footer";
-import { Margin, usePDF } from "react-to-pdf";
-import { Printable } from "components/Printable";
 
 const name = "Isaac Poole";
 
@@ -43,6 +41,7 @@ const additionalSkills: string[] = [
   "CSS",
   "Sass",
   "VS Code Extension API",
+  "Embedded Hardware",
 ];
 
 const socials: SocialPlatformLink[] = [
@@ -71,7 +70,7 @@ const experience: ExperienceSectionProps = {
       description: [
         "Engineered a scalable cloud service with Cloudflare Workers, facilitating precise user event tracking for advanced analytics insights.",
         "Mastered and championed engineering group's best practices and coding standards in TypeScript and React.",
-        "Enhanced app on-boarding via React/Stripe experience, resulting in an increase in conversion rates.",
+        "Re-implemented on-boarding and billing in React using Stripe, bolstering conversion rates.",
       ],
     },
   ],
@@ -169,25 +168,9 @@ const contacts: Contacts = {
 };
 
 function App() {
-  const { targetRef, toPDF } = usePDF({
-    filename: `${name}-resume.pdf`,
-    page: {
-      margin: Margin.MEDIUM,
-    },
-  });
-
-  const handleDownload = () => {
-    (targetRef.current as HTMLDialogElement).showModal();
-    // toPDF();
-    // (targetRef.current as HTMLDialogElement).close();
-  };
-
   return (
     <>
       <>
-        <button onClick={handleDownload} className="print-button">
-          Print
-        </button>
         <Header sections={SECTIONS} socials={socials} />
         <AboutSection name={name} tag={tag} about={about} />
         <SkillsSection skills={skills} additionalSkills={additionalSkills} />
@@ -196,20 +179,6 @@ function App() {
         <ContactSection contacts={contacts} socials={socials} />
         <Footer socials={socials} />
       </>
-      <div className="hidden">
-        <Printable
-          ref={targetRef}
-          name={name}
-          tag={tag}
-          about={about}
-          experience={experience}
-          skills={skills}
-          additionalSkills={additionalSkills}
-          projects={projects}
-          contacts={contacts}
-          socials={socials}
-        />
-      </div>
     </>
   );
 }
