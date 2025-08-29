@@ -3,76 +3,131 @@
     width='100%'
     height='100%'
     viewBox='0 0 1200 1200'
-><rect fill='#4F00D8' width='1200' height='1200' /><defs><radialGradient
+>
+    <!-- Animate the base rectangle fill color to provide a subtle overall background shift -->
+    <rect fill='#4F00D8' width='1200' height='1200'>
+        <animate
+            attributeName="fill"
+            values="#4F00D8; #3D92FF; #09FFD3; #4767ec; #7C4DFF; #3D92FF; #4F00D8"
+            keyTimes="0;0.16;0.32;0.48;0.64;0.80;1"
+            dur="40s"
+            repeatCount="indefinite"
+        />
+    </rect>
+    <defs>
+        <radialGradient
             id='a'
             cx='0'
             cy='1200'
             r='1200'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#4767ec' /><stop
-                offset='1'
-                stop-color='#4767ec'
-                stop-opacity='0'
-            /></radialGradient><radialGradient
+        >
+            <stop offset='0' stop-color='#4767ec'>
+                <animate
+                    attributeName="stop-color"
+                    values="#4767ec; #5a78ff; #3e5be0; #6a8dff; #4767ec"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="15s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#4767ec' stop-opacity='0' />
+        </radialGradient>
+        <radialGradient
             id='b'
             cx='1200'
             cy='1200'
             r='1200'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#38b4d6' /><stop
-                offset='1'
-                stop-color='#38b4d6'
-                stop-opacity='0'
-            /></radialGradient><radialGradient
+        >
+            <stop offset='0' stop-color='#38b4d6'>
+                <animate
+                    attributeName="stop-color"
+                    values="#38b4d6; #42cbe8; #2c9fac; #55e0fa; #38b4d6"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="18s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#38b4d6' stop-opacity='0' />
+        </radialGradient>
+        <radialGradient
             id='c'
             cx='600'
             cy='0'
             r='600'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#2cd0ea' /><stop
-                offset='1'
-                stop-color='#2cd0ea'
-                stop-opacity='0'
-            /></radialGradient><radialGradient
+        >
+            <stop offset='0' stop-color='#2cd0ea'>
+                <animate
+                    attributeName="stop-color"
+                    values="#2cd0ea; #3de1fb; #1ca5c0; #4ff7ff; #2cd0ea"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="13s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#2cd0ea' stop-opacity='0' />
+        </radialGradient>
+        <radialGradient
             id='d'
             cx='600'
             cy='1200'
             r='600'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#4F00D8' /><stop
-                offset='1'
-                stop-color='#4F00D8'
-                stop-opacity='0'
-            /></radialGradient><radialGradient
+        >
+            <stop offset='0' stop-color='#4F00D8'>
+                <animate
+                    attributeName="stop-color"
+                    values="#4F00D8; #6213eb; #3c00a8; #8a3ffc; #4F00D8"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="16s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#4F00D8' stop-opacity='0' />
+        </radialGradient>
+        <radialGradient
             id='e'
             cx='0'
             cy='0'
             r='1200'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#3D92FF' /><stop
-                offset='1'
-                stop-color='#3D92FF'
-                stop-opacity='0'
-            /></radialGradient><radialGradient
+        >
+            <stop offset='0' stop-color='#3D92FF'>
+                <animate
+                    attributeName="stop-color"
+                    values="#3D92FF; #50a3ff; #2a7bd8; #63b4ff; #3D92FF"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="20s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#3D92FF' stop-opacity='0' />
+        </radialGradient>
+        <radialGradient
             id='f'
             cx='1200'
             cy='0'
             r='1200'
             gradientUnits='userSpaceOnUse'
-        ><stop offset='0' stop-color='#09FFD3' /><stop
-                offset='1'
-                stop-color='#09FFD3'
-                stop-opacity='0'
-            /></radialGradient></defs><rect
-        fill='url(#a)'
-        width='1200'
-        height='1200'
-    /><rect fill='url(#b)' width='1200' height='1200' /><rect
-        fill='url(#c)'
-        width='1200'
-        height='1200'
-    /><rect fill='url(#d)' width='1200' height='1200' /><rect
-        fill='url(#e)'
-        width='1200'
-        height='1200'
-    /><rect fill='url(#f)' width='1200' height='1200' /></svg>
+        >
+            <stop offset='0' stop-color='#09FFD3'>
+                <animate
+                    attributeName="stop-color"
+                    values="#09FFD3; #1cffe4; #00c9a6; #3afff0; #09FFD3"
+                    keyTimes="0;0.25;0.5;0.75;1"
+                    dur="22s"
+                    repeatCount="indefinite"
+                />
+            </stop>
+            <stop offset='1' stop-color='#09FFD3' stop-opacity='0' />
+        </radialGradient>
+    </defs>
+    <rect fill='url(#a)' width='1200' height='1200' />
+    <rect fill='url(#b)' width='1200' height='1200' />
+    <rect fill='url(#c)' width='1200' height='1200' />
+    <rect fill='url(#d)' width='1200' height='1200' />
+    <rect fill='url(#e)' width='1200' height='1200' />
+    <rect fill='url(#f)' width='1200' height='1200' />
+</svg>
