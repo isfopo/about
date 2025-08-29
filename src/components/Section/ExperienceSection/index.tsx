@@ -6,6 +6,7 @@ export interface Experience {
   location?: string;
   startDate: string;
   endDate?: string;
+  bio?: string;
   description?: string[];
 }
 
@@ -58,27 +59,34 @@ export const ExperienceSection = ({
       location,
       startDate,
       endDate,
+      bio,
       description,
     }: { title: string; company: string } & Experience): React.ReactElement => {
       return (
         <div className={styles["container"]} key={`${company}-${title}`}>
+          <header>
+            <p>
+              <strong>{company}</strong>
+            </p>
+            <p>
+              {startDate} - {endDate ? endDate : "Present"}
+            </p>
+            <p>{title}</p>
+            <p>{location}</p>
+          </header>
           <p>
-            <strong>{company}</strong>
+            <i>{bio}</i>
           </p>
-          <p>
-            {startDate} - {endDate ? endDate : "Present"}
-          </p>
-          <p>{title}</p>
-          <p>{location}</p>
-          <p className={styles["description"]}>
+
+          <ul className={styles["description"]}>
             {description?.map((desc: string) => (
-              <span>{desc}</span>
+              <li>{desc}</li>
             ))}
-          </p>
+          </ul>
         </div>
       );
     },
-    []
+    [],
   );
 
   return (
@@ -94,12 +102,12 @@ export const ExperienceSection = ({
       <div className={styles["education"]}>
         <h3>Education</h3>
         {education.map(({ degree, institution, ...props }) =>
-          item({ title: degree, company: institution, ...props })
+          item({ title: degree, company: institution, ...props }),
         )}
       </div>
       <div className={styles["volunteer"]}>
         {volunteer.map(({ role, organization, ...props }) =>
-          item({ title: role, company: organization, ...props })
+          item({ title: role, company: organization, ...props }),
         )}
       </div>
       <div className={styles["certifications"]}>
@@ -110,7 +118,7 @@ export const ExperienceSection = ({
               startDate: dateIssued,
               endDate: expirationDate,
               ...props,
-            })
+            }),
         )}
       </div>
     </Section>
