@@ -1,28 +1,37 @@
 .about {
-  display: grid;
-  grid-template-columns: 100%;
-
-  img {
-    width: 80%;
-    height: auto;
-  }
-
-  .container {
     display: grid;
+    gap: 4rem;
     grid-template-columns: 100%;
-    justify-items: start;
 
-    p {
-      text-align: left;
+    img {
+        height: auto;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: min(50%, 46rem) 1fr;
 
     .container {
-      margin: 0;
-      margin-right: 5rem;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: start;
+
+        p {
+            text-align: left;
+        }
     }
-  }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -10;
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: min(50%, 46rem) 1fr;
+
+        .container {
+            margin: 0;
+            margin-right: 5rem;
+        }
+    }
 }

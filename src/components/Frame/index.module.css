@@ -1,6 +1,29 @@
 .frame {
-  img {
     width: 32rem;
-    border-radius: 20%;
-  }
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+.frame img {
+    z-index: 1; /* Ensures the main image is on top */
+    width: 100%; /* Image fills the width of the frame */
+    border-radius: inherit; /* Inherits radius from .frame */
+    display: block; /* Removes extra space below the image */
+}
+
+.frame .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5; /* Ensures the background is behind the image */
+}
+
+.frame .background > svg {
+    width: 100%; /* SVG fills the width of its parent (.background) */
+    border-radius: 50%; /* Inherits radius from .frame */
+    height: 100%; /* SVG fills the height of its parent (.background) */
+    object-fit: cover; /* Ensures the SVG covers the entire area, cropping if necessary */
+    display: block; /* Important for object-fit to work correctly with SVG */
 }
