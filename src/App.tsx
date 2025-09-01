@@ -139,7 +139,8 @@ const projects: Project[] = [
   {
     title: "Environments",
     category: "programming",
-    description: "A VS Code extension to keep track of tasks for the day.",
+    description:
+      "A VS Code extension to manage environments from your .env files.",
     technologies: ["TypeScript", "VS Code Extension API"],
     image: {
       label: "Grind VS Code extension",
