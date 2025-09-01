@@ -8,7 +8,6 @@ import {
   ExperienceSectionProps,
 } from "components/Section/ExperienceSection";
 import { Project, ProjectsSection } from "components/Section/ProjectsSection";
-import { Skill, SkillsSection } from "components/Section/SkillsSection";
 import { SECTIONS } from "consts";
 import { Footer } from "components/Footer";
 
@@ -18,31 +17,31 @@ const tag = "Full-Stack Software Developer";
 
 const about = `Motivated by creativity and a passion for innovation, I fuse my backgrounds in software engineering and music to craft technology that's both functional and inspired.`;
 
-const skills: Skill[] = [
-  { name: "Typescript", level: 10 },
-  { name: "React", level: 10 },
-  { name: "C# / .NET Application Development", level: 8 },
-  { name: "Python", level: 7 },
-];
+// const skills: Skill[] = [
+//   { name: "Typescript", level: 10 },
+//   { name: "React", level: 10 },
+//   { name: "C# / .NET Application Development", level: 8 },
+//   { name: "Python", level: 7 },
+// ];
 
-const additionalSkills: string[] = [
-  "Ableton Live API",
-  "Svelte",
-  "WebSockets",
-  "Stripe",
-  "Git",
-  "Github Actions",
-  "Cloudflare Workers",
-  "PostgreSQL",
-  "Express",
-  "Node.js",
-  "REST APIs",
-  "HTML",
-  "CSS",
-  "Sass",
-  "VS Code Extension API",
-  "Embedded Hardware",
-];
+// const additionalSkills: string[] = [
+//   "Ableton Live API",
+//   "Svelte",
+//   "WebSockets",
+//   "Stripe",
+//   "Git",
+//   "Github Actions",
+//   "Cloudflare Workers",
+//   "PostgreSQL",
+//   "Express",
+//   "Node.js",
+//   "REST APIs",
+//   "HTML",
+//   "CSS",
+//   "Sass",
+//   "VS Code Extension API",
+//   "Embedded Hardware",
+// ];
 
 const socials: SocialPlatformLink[] = [
   {
@@ -176,9 +175,9 @@ function App() {
       <>
         <Header sections={SECTIONS} socials={socials} />
         <AboutSection name={name} tag={tag} about={about} />
-        <SkillsSection skills={skills} additionalSkills={additionalSkills} />
-        <ExperienceSection {...experience} />
         <ProjectsSection projects={projects} />
+        {/*<SkillsSection skills={skills} additionalSkills={additionalSkills} />*/}
+        <ExperienceSection {...experience} />
         <ContactSection contacts={contacts} socials={socials} />
         <Footer socials={socials} />
       </>
