@@ -96,6 +96,21 @@ const experience: ExperienceSectionProps = {
 
 const projects: Project[] = [
   {
+    title: "SoniScribe",
+    category: "programming",
+    description:
+      "An audio tool for musicial transcription that segments a track by beat, measure and section to easier playback.",
+    technologies: ["React", "TypeScript"],
+    image: {
+      label: "SoniScribe",
+      src: "photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "github",
+      href: "https://www.github.com/isfopo/soniscribe",
+    },
+  },
+  {
     title: "Live Remote",
     category: "programming",
     description: "Control Ableton Live from any device on a local network.",
@@ -148,7 +163,7 @@ const projects: Project[] = [
     },
     link: {
       platform: "github",
-      href: "https://www.github.com/isfopo/grind",
+      href: "https://www.github.com/isfopo/environments",
     },
   },
   {
