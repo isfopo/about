@@ -1,7 +1,4 @@
 import { Section } from "components/Section";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { PlatformIcons } from "./PlatformIcons";
 import styles from "./index.module.css";
 
@@ -51,41 +48,35 @@ export interface ProjectsSectionProps {
 }
 
 export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
-  const [emblaRef] = useEmblaCarousel({}, [
-    WheelGesturesPlugin(),
-    Autoplay({ stopOnMouseEnter: true, jump: false }),
-  ]);
-
   return (
     <Section subject="projects" className={styles["projects"]}>
       <h3>Projects</h3>
-      <div ref={emblaRef}>
-        <div className={styles["container"]}>
-          {projects.map(({ title, technologies, description, link }) => (
-            <a
-              key={title}
-              className={styles["slide"]}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`View ${title} on ${link.platform}`}
-            >
+      <div className={styles["container"]}>
+        {projects.map(({ title, technologies, description, link }) => (
+          <a
+            key={title}
+            className={styles["slide"]}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`View ${title} on ${link.platform}`}
+          >
+            <div>
               <h4>{title}</h4>
 
               <p className={styles["description"]}>{description}</p>
 
               {technologies && technologies.length > 0 && (
-                <p>
-                  <strong>Technologies:</strong>
-                  <br />
-                  {technologies.join(", ")}
-                </p>
+                <>
+                  <h5>Technologies:</h5>
+                  <p>{technologies.join(", ")}</p>
+                </>
               )}
+            </div>
 
-              {PlatformIcons[link.platform]}
-            </a>
-          ))}
-        </div>
+            {PlatformIcons[link.platform]}
+          </a>
+        ))}
       </div>
     </Section>
   );
