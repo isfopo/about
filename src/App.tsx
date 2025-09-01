@@ -134,6 +134,21 @@ const projects: Project[] = [
       platform: "github",
       href: "https://www.github.com/isfopo/grind",
     },
+    hide: true,
+  },
+  {
+    title: "Environments",
+    category: "programming",
+    description: "A VS Code extension to keep track of tasks for the day.",
+    technologies: ["TypeScript", "VS Code Extension API"],
+    image: {
+      label: "Grind VS Code extension",
+      src: "photos/mountain_portrait.jpg",
+    },
+    link: {
+      platform: "github",
+      href: "https://www.github.com/isfopo/grind",
+    },
   },
   {
     title: "genra // non // genra",
@@ -175,9 +190,9 @@ function App() {
       <>
         <Header sections={SECTIONS} socials={socials} />
         <AboutSection name={name} tag={tag} about={about} />
+        <ExperienceSection {...experience} />
         <ProjectsSection projects={projects} />
         {/*<SkillsSection skills={skills} additionalSkills={additionalSkills} />*/}
-        <ExperienceSection {...experience} />
         <ContactSection contacts={contacts} socials={socials} />
         <Footer socials={socials} />
       </>

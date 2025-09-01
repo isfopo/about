@@ -41,6 +41,11 @@ export interface Project {
     platform: ProjectLinkPlatform;
     href: `https://${string}.${string}.${string}`;
   };
+  /**
+   * An optional boolean flag to hide the project from the section.
+   * This can be used to temporarily remove a project from the section.
+   */
+  hide?: boolean;
 }
 
 export interface ProjectsSectionProps {
@@ -52,31 +57,35 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
     <Section subject="projects" className={styles["projects"]}>
       <h3>Projects</h3>
       <div className={styles["container"]}>
-        {projects.map(({ title, technologies, description, link }) => (
-          <a
-            key={title}
-            className={styles["slide"]}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={`View ${title} on ${link.platform}`}
-          >
-            <div>
-              <h4>{title}</h4>
+        {projects.map(({ title, technologies, description, link, hide }) => {
+          if (hide) return <></>;
 
-              <p className={styles["description"]}>{description}</p>
+          return (
+            <a
+              key={title}
+              className={styles["slide"]}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`View ${title} on ${link.platform}`}
+            >
+              <div>
+                <h4>{title}</h4>
 
-              {technologies && technologies.length > 0 && (
-                <>
-                  <h5>Technologies:</h5>
-                  <p>{technologies.join(", ")}</p>
-                </>
-              )}
-            </div>
+                <p className={styles["description"]}>{description}</p>
 
-            {PlatformIcons[link.platform]}
-          </a>
-        ))}
+                {technologies && technologies.length > 0 && (
+                  <>
+                    <h5>Technologies:</h5>
+                    <p>{technologies.join(", ")}</p>
+                  </>
+                )}
+              </div>
+
+              {PlatformIcons[link.platform]}
+            </a>
+          );
+        })}
       </div>
     </Section>
   );
